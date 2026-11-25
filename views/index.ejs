@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>CamisaSe7e</h1>
+        <p>Catálogo de Camisas de Futebol</p>
+    </header>
+
+    <main>
+
+<section class="cadastro">
+    <h2>Cadastrar nova camisa</h2>
+
+    <form action="/itens" method="POST">
+
+        <label>Nome da camisa:</label>
+        <input type="text" name="nome" required>
+
+        <label>Time:</label>
+        <input type="text" name="time" required>
+
+        <label>Tamanho:</label>
+        <select name="tamanho" required>
+            <option value="">Selecione</option>
+            <option value="P">P</option>
+            <option value="M">M</option>
+            <option value="G">G</option>
+            <option value="GG">GG</option>
+        </select>
+
+        <label>Preço:</label>
+        <input type="number" name="preco" step="0.01" min="0.01" required>
+
+        <label>Estoque:</label>
+        <input type="number" name="estoque" min="0" step="1" required>
+
+        <button type="submit">Cadastrar camisa</button>
+
+    </form>
+</section>
+
+        <h2>Camisas disponíveis</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Time</th>
+                    <th>Tamanho</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% camisas.forEach(function(camisa) { %>
+                    <tr>
+                        <td><%= camisa.id %></td>
+                        <td><%= camisa.nome %></td>
+                        <td><%= camisa.time %></td>
+                        <td><%= camisa.tamanho %></td>
+                        <td>R$ <%= Number(camisa.preco).toFixed(2).replace('.', ',') %></td>
+                        <td><%= camisa.estoque %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </main>
+
+</body>
+</html>
