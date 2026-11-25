@@ -74,6 +74,7 @@ npm start
 
 - Paulo Roberto Avante Friche
 - Huggo Henrique da Silva Godoy
+- Eduardo Augusto Miranda
 
 ## Disciplina
 
