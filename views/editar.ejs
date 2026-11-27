@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Camisa - CamisaSe7e</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>CamisaSe7e</h1>
+        <p>Editar informações da camisa</p>
+    </header>
+
+    <main>
+        <h2>Editar camisa</h2>
+
+        <form action="/editar/<%= camisa.id %>" method="POST">
+
+            <label>Nome da camisa</label>
+            <input type="text" name="nome" value="<%= camisa.nome %>" required>
+
+            <label>Time</label>
+            <input type="text" name="time" value="<%= camisa.time %>" required>
+
+            <label>Tamanho</label>
+            <input type="text" name="tamanho" value="<%= camisa.tamanho %>" required>
+
+            <label>Preço</label>
+            <input type="number" name="preco" step="0.01" value="<%= camisa.preco %>" required>
+
+            <label>Estoque</label>
+            <input type="number" name="estoque" value="<%= camisa.estoque %>" required>
+
+            <button type="submit">Salvar alterações</button>
+
+            <a href="/" class="btn-voltar">Voltar</a>
+
+        </form>
+    </main>
+
+</body>
+</html>

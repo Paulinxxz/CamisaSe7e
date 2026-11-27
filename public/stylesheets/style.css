@@ -189,3 +189,62 @@ tbody tr:hover {
         white-space: nowrap;
     }
 }
+
+
+/* ACOES DA TABELA */
+
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.acoes form {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+.btn-editar,
+.btn-excluir,
+.btn-voltar {
+    display: inline-block;
+    padding: 9px 13px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-editar {
+    background: #174b8f;
+    color: #ffffff;
+}
+
+.btn-editar:hover {
+    background: #2878ff;
+}
+
+.btn-excluir {
+    background: #8f2635;
+    color: #ffffff;
+}
+
+.btn-excluir:hover {
+    background: #d9364c;
+}
+
+.btn-voltar {
+    background: #263a55;
+    color: #ffffff;
+    margin-left: 10px;
+}
+
+.btn-voltar:hover {
+    background: #354f70;
+}
